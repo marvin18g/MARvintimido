@@ -110,8 +110,11 @@ body{
                     echo "<td>" . $row['email'] . "</td>";
                     echo "<td>" . $row['status'] . "</td>";
                     echo "<td>" . $row['id_roles'] . "</td>";
+
                     echo "<td><button type='button' class='btn btn-primary' data-toggle='modal' data-target='#myModal" . $row['usuario'] . "'>Ver detalles</button></td>";
-                    echo "</tr>";
+                    
+                    
+                    echo '<td><a href="editar.php?id=' . $row['id_usuario'] . '">Editar</a> | <a href="eliminarusuario.php?id=' . $row['id_usuario'] . '">Eliminar</a></td>';
 
                     // Crear un modal para cada fila que muestre los detalles del cliente correspondiente
                     echo "<div class='modal fade' id='myModal" . $row['usuario'] . "'>";
