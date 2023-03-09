@@ -1,28 +1,21 @@
 
+
 <!DOCTYPE html>
-<html lang="pt-br">
-
-
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Bootstrap demo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in & Sign up Form</title>
+    <link rel="stylesheet" href="http://localhost/marvintimido/MARvintimido/estilos/estilos1.css" />
+
     
-    <link rel="stylesheet" href="http://localhost/MARVINVETERINARIA/VETERINARIAMARVIN2023/estilos/styles1.css" />
-    <title>Formulário</title>
 </head>
 
 <body>
-
 <?php
 
 
@@ -30,79 +23,55 @@ include ("menu.php");
 
 
 ?>
-   
-    <div class="container">
-        <div class="form-image">
-            <img src="img/busin.svg" alt="">
-        </div>
-        <div class="form">
-            <form action="verusuario.php" method="post">
-                <div class="form-header">
-                    <div class="title">
-                        <h1>Datos del Usuario</h1>
-                    </div>
-                    <div class="login-button">
-                        <button><a href="#"></a></button>
-                    </div>
-                </div>
 
-                
+    <main>
+        <div class="box">
+            <div class="inner-box">
+                <div class="forms-wrap">
+                    <form action="verusuario.php" method="post" autocomplete="off" class="sign-in-form">
+                        <div class="logo">
+                            <img src="./img/coffee.png" alt="easyclass" />
+                            <h4>Marvin Galeano</h4>
+                            
+                        </div>
 
-                <div class="input-group">
-                    <div class="input-box">
-                        <label for="usuario">Usuario</label>
-                        <input id="usuario" type="text" name="usuario" placeholder="Digite su usuario" required>
-                    </div>
+                        <div class="heading">
+                            <h2>Roles</h2>
+                            
+                            <h6>Aun no estas registrado?</h6>
+                            <a href="#" class="toggle">Sign up</a>
+                        </div>
 
-                    <div class="input-box">
-                        <label for="password">password</label>
-                        <input id="password" type="password" name="password" placeholder="Digite su password" required>
-                    </div>
-                    <div class="input-box">
-                        <label for="email">Email</label>
-                        <input id="email" type="email" name="email" placeholder="Digite su Email" required>
-                    </div>
+                        <div class="actual-form">
+                            <div class="input-wrap">
+                                <input type="text" name="usuario" id="usuario" class="input-field" autocomplete="off" required />
+                                <label>Usuario</label>
+                            </div>
 
-                    <div class="input-box">
-                        <label for="number">Telefono</label>
-                        <input id="telefono" type="tel" name="telefono" placeholder="(xx) xxxx-xxxx" required>
-                    </div>
+                            <div class="input-wrap">
+                                <input type="text" name="password" id="password" class="input-field" autocomplete="off" required />
+                                <label>Password</label>
+                            </div>
+                            <div class="input-wrap">
+                                <input type="text" name="email" id="email" class="input-field" autocomplete="off" required />
+                                <label>Email</label>
+                            </div>
 
-    
-
-                    
-
-
-    </select>
-     
-
-
-                </div>
-
-                <div class="gender-inputs">
-                    <div class="gender-title">
-                        <h6>Status</h6>
-                    </div>
-
-                    <div class="form-group">
-				<label for="status">Estatus:</label>
+                            <div class="input-wrap">
+                                <input type="text" name="telefono" id="telefono" class="input-field" autocomplete="off" required />
+                                <label>Telefono</label>
+                            </div>
+                            <div class="form-group">
+                            <h6>Status</h6>
+				
 				<select class="form-control" name="status">
 					<option value="1">1</option>
 					<option value="0">0</option>
 				</select>
 			</div>
 
-            <br>
-
-   
-           
-   
-			<button type="submit" class="btn btn-primary">Guardar</button>
-			<button type="button" class="btn btn-secondary" onclick="window.location.href='registrousuario.php'" id="myModal">Ver Usuarios</button>
-			<button type="button" class="btn btn-danger" onclick="limpiarFormulario()">Limpiar</button>
-		</form>
-
-    <div class="col-5">
+                
+            <div class="col-15">
   <div class="input-group mb-3">
     <small class="input-group-text"><i class="fa-solid fa-adress-book"></i></small>
     <select name="id_roles" id="id_roles" class="form-select" aria-label="Default select example" require>
@@ -137,23 +106,102 @@ echo "</select>";
 $conexion = null;
 ?>
                     
-	</div>
-            </form>
+                    </div>
+           
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-<script>
-		function limpiarFormulario() {
-			document.getElementById("nombre").value = "";
-			document.getElementById("telefono").value = "";
-			document.getElementById("dui").value = "";
-			document.getElementById("direccion").value = "";
-			document.getElementById("email").value = "";
-			document.getElementById("estatus").value = "Activo";
-		}
-	</script>
+            
+                            <input type="submit" value="Guardar" class="sign-btn" />
+                            <input type="submit" value="Ver detalles" onclick="window.location.href='registrousuario.php'" id="myModal" class="sign-btn" />
+                        
+
+                            <p class="text">
+                                Forgotten your password or you login datails?
+                                <a href="#">Get help</a> signing in
+                            </p>
+                            
+                        </div>
+                        
+                        
+                    </form>
+                   
+
+                    <form action="verusuario.php" method="post" autocomplete="off" class="sign-up-form">
+                        <div class="logo">
+                            <img src="./img/logo.png" alt="easyclass" />
+                            <h4>easyclass</h4>
+                        </div>
+
+                        <div class="heading">
+                            <h2>Get Started</h2>
+                            <h6>Already have an account?</h6>
+                            <a href="#" class="toggle">Sign in</a>
+                        </div>
+
+                        <div class="actual-form">
+                            <div class="input-wrap">
+                                <input type="text" minlength="4" class="input-field" autocomplete="off" required />
+                                <label>Name</label>
+                            </div>
+
+                            <div class="input-wrap">
+                                <input name="username" id="username" type="email" class="input-field" autocomplete="off"
+                                    required />
+
+                                <label>Email</label>
+                            </div>
+
+                            <div class="input-wrap">
+                                <input type="password"  class="input-field" required
+                                name="password"  id="password"/>
+                                <label>Password</label>
+                            </div>
+
+                            <input type="submit" value="Sign Up" class="sign-btn" />
+
+                            <p class="text">
+                                By signing up, I agree to the
+                                <a href="#">Terms of Services</a> and
+                                <a href="#">Privacy Policy</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+                
+
+                <div class="carousel">
+                    <div class="images-wrapper">
+                        <img src="./img/214603.webp" class="image img-1 show" alt="" />
+                        <img src="./img/enfemera.jpg" class="image img-2" alt="" />
+                        <img src="./img/crea.jpg" class="image img-3" alt="" />
+                        
+                    </div>
+
+                    <div class="text-slider">
+                        <div class="text-wrap">
+                            <div class="text-group">
+                                <h2>Creador por @MarvinGaleano</h2>
+                                <h2>Vaterinaria Marvin | SV</h2>
+                               
+                            </div>
+                        </div>
+
+                        <div class="bullets">
+                            <span class="active" data-value="1"></span>
+                            <span data-value="2"></span>
+                            <span data-value="3"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+ <script src="estilos/app.js"></script>
+ <script src="http://localhost/MARVINVETERINARIA/estilos/script.js"></script>
 </body>
 
 </html>

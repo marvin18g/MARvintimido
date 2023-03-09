@@ -142,9 +142,9 @@ include ("menu.php");
 
                 <div class="carousel">
                     <div class="images-wrapper">
-                        <img src="./img/214603.webp" class="image img-1 show" alt="" />
-                        <img src="./img/enfemera.jpg" class="image img-2" alt="" />
-                        <img src="./img/crea.jpg" class="image img-3" alt="" />
+                        <img src="./img/qs1.jpg" class="image img-1 show" alt="" />
+                        <img src="./img/qs.jpg" class="image img-2" alt="" />
+                        <img src="./img/qs2.jpg" class="image img-3" alt="" />
                         
                     </div>
 
@@ -152,6 +152,7 @@ include ("menu.php");
                         <div class="text-wrap">
                             <div class="text-group">
                                 <h2>Creador por @MarvinGaleano</h2>
+                                <h2>Veterinaria Marvin | SV</h2>
                                 <h2>Vaterinaria Marvin | SV</h2>
                                
                             </div>

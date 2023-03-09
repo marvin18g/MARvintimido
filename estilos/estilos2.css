@@ -32,8 +32,8 @@ main {
 .box {
   position: relative;
   width: 100%;
-  max-width: 1820px;
-  height: 800px;
+  max-width: 1920px;
+  height: 820px;
   margin-top: 34px;
   background-color: #fff;
   border-radius: 3.3rem;
