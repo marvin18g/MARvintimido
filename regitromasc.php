@@ -119,7 +119,7 @@ body{
                     echo "<td><button type='button' class='btn btn-primary' data-toggle='modal' data-target='#myModal" . $row['nombre'] . "'>Ver detalles</button></td>";
                   
 
-                    echo '<td><a href="editar.php?id=' . $row['id_mascotas'] . '">Editar</a> | <a href="eliminar.php?id=' . $row['id_mascotas'] . '">Eliminar</a></td>';
+                    echo '<td><a href="actualizarmascota.php?id=' . $row['id_mascotas'] . '">Actualizar</a> | <a href="eliminar.php?id=' . $row['id_mascotas'] . '">Eliminar</a></td>';
                     echo '</tr>';
                     
 

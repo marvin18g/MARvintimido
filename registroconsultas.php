@@ -113,7 +113,7 @@ body{
                     echo "<td>" . $row['id_usuario'] . "</td>";
 
                     echo "<td><button type='button' class='btn btn-primary' data-toggle='modal' data-target='#myModal" . $row['examen_fisico'] . "'>Ver detalles</button></td>";
-                    echo '<td><a href="editar.php?id=' . $row['id_consulta'] . '">Editar</a> | <a href="eliminarconsulta.php?id=' . $row['id_consulta'] . '">Eliminar</a></td>';
+                    echo '<td><a href="actualizarconsulta.php?id=' . $row['id_consulta'] . '">Actualizar</a> | <a href="eliminarconsulta.php?id=' . $row['id_consulta'] . '">Eliminar</a></td>';
 
                     // Crear un modal para cada fila que muestre los detalles del cliente correspondiente
                     echo "<div class='modal fade' id='myModal" . $row['examen_fisico'] . "'>";
