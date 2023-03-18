@@ -1,157 +1,114 @@
-
-
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
-  <head>
+<?php include('menu.php'); ?>
+<?php include('config.php'); ?>
+
+<head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  </head>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://localhost/marvintimido/MARvintimido/estilos/wow.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Mascotas</title>
+</head>
+
+<body>
+  <br>
 
   
+  <br>
+  <br><br>
+    <div class="container"><br>
+        <div class="row">
+            <div class="col-3">
+              <br>
+                <div class="row justify-content-center">
+                  <br>
+                    <h4>Actualizar Cliente</h4>
+                    <hr>
+                    <form class="mx-auto" method="post" id="form_cliente">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="raza" class="form-label">telefono:</label>
+                            <input type="text" class="form-control" id="telefono" name="telefono">
+                        </div>
+                        <div class="mb-3">
+                            <label for="color" class="form-label">dui:</label>
+                            <input type="text" class="form-control" id="dui" name="dui">
+                        </div>
+                        <div class="mb-3">
+                            <label for="direccion" class="form-label">direccion:</label>
+                            <input type="text" class="form-control" id="direccion" name="direccion">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">email:</label>
+                            <input type="email" class="form-control" id="email" name="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="sexo" class="form-label">status:</label>
+                            <select class="form-select" id="status" name="status">
+                                <option value="1">1</option>
+                                <option value="0">0</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" id= "editar-cliente">Actualizar</button>
+                    </form>
 
-  
 
-  <body>
-    <h1>Hello, world!</h1>
+                </div>
+            </div>
+            <div class="col-9">
+                
 
-    <nav class="navbar navbar-dark bg-dark fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">@Marvin Galeano</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">@Marvin Galeano</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-          
-            <a class="nav-link active" aria-current="page" href="principal.php"><i class="bi bi-bell"></i>        Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="cliente.php"><i class="bi bi-bug-fill"></i>          Cliente</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Dueño.php"><i class="bi bi-person-check"></i>    Dueño</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Medicamento.php"><i class="bi bi-capsule"></i>    Medicamento</a>
-          </li>
+                <input class="form-control me-2" id="busqueda-cliente" type="search" placeholder="Search" aria-label="Search">
+
+                <br>
+                <table id="tabla-cliente" class="table table-dark table-striped" >
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Telefono</th>
+                            <th>Dui</th>
+                            <th>Direccion</th>
+                            <th>Email</th>
+                            <th>status</th>
+                            <th>Acciones</th>
+                            <th></th>
+
+                            
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- aquí se llenarán los datos de la consulta -->
+                    </tbody>
+                </table>
+                
          
-        </form>
-      </div>
-    </div>
-  </div>
-</nav>
+            </div>
 
-<br>
 
-<br>
+            <!-- Optional JavaScript; choose one of the two! -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="js/cliente.js"></script>
+            <!-- Option 1: Bootstrap Bundle with Popper -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-<div class="container-fluid">
-    <h2>Datos del Cliente</h2>
-    <table class="table table-dark table-striped">
-        <thead>
-            <tr>
-            <th>id</th>
-                <th>Nombre</th>
-                <th>Teléfono</th>
-                <th>DUI</th>
-                <th>Dirección</th>
-                <th>Email</th>
-                <th>Estatus</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            // Establecer la conexión con la base de datos
-            $host = "localhost";
-            $usuario = "root";
-            $password = "";
-            $base_de_datos = "veterinariaa";
+            <!-- Option 2: Separate Popper and Bootstrap JS -->
+            <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
 
-            try {
-                $conexion = new PDO("mysql:host=$host;dbname=$base_de_datos", $usuario, $password);
-                // Manejar errores de PDO en modo de excepción
-                $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-                // Realizar la consulta SELECT a la base de datos
-                $sql = "SELECT id_cliente, nombre, telefono, dui, direccion, email, status FROM cliente";
-                $stmt = $conexion->prepare($sql);
-                $stmt->execute();
-                $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-                // Recorrer los resultados de la consulta y mostrarlos en una tabla HTML
-                foreach ($resultados as $row) {
-                    echo "<tr>";
-                    echo "<td>" . $row['id_cliente'] . "</td>";
-                    echo "<td>" . $row['nombre'] . "</td>";
-                    echo "<td>" . $row['telefono'] . "</td>";
-                    echo "<td>" . $row['dui'] . "</td>";
-                    echo "<td>" . $row['direccion'] . "</td>";
-                    echo "<td>" . $row['email'] . "</td>";
-                    echo "<td>" . $row['status'] . "</td>";
-                    echo "<td><button type='button' class='btn btn-primary' data-toggle='modal' data-target='#myModal" . $row['nombre'] . "'>Ver detalles</button></td>";
-                 
-
-                    echo '<td><a href="actualizarcliente.php?id='. $row['id_cliente'] . '">Actualizar</a> | <a href="eliminarcliente.php?id=' . $row['id_cliente'] . '">Eliminar</a></td>';
-                   
-
-                    // Crear un modal para cada fila que muestre los detalles del cliente correspondiente
-                    echo "<div class='modal fade' id='myModal" . $row['nombre'] . "'>";
-                    echo "<div class='modal-dialog'>";
-                    echo "<div class='modal-content'>";
-
-                    // Encabezado del modal
-                    echo "<div class='modal-header'>";
-                    echo "<h4 class='modal-title'>" . $row['nombre'] . "</h4>";
-                    echo "<button type='button' class='close' data-dismiss='modal'>&times;</button>";
-                    echo "</div>";
-    
-                    // Cuerpo del modal
-                    echo "<div class='modal-body'>";
-                    echo "<p><strong>Teléfono:</strong> " . $row['telefono'] . "</p>";
-                    echo "<p><strong>DUI:</strong> " . $row['dui'] . "</p>";
-                    echo "<p><strong>Dirección:</strong> " . $row['direccion'] . "</p>";
-                    echo "<p><strong>Email:</strong> " . $row['email'] . "</p>";
-                    echo "<p><strong>Estatus:</strong> " . $row['status'] . "</p>";
-                    echo "</div>";
-    
-                    // Pie del modal
-                    echo "<div class='modal-footer'>";
-                    echo "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Cerrar</button>";
-                    echo "</div>";
-                    echo "</div>";
-                    echo "</div>";
-                    echo "</div>";
-                }
-            } catch(PDOException $e) {
-                echo "Error: " . $e->getMessage();
-            }
-            // Cerrar la conexión con la base de datos
-            $conexion = null;
-            ?>
-        </tbody>
-        
-    </table>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-  </body>
 </html>
-

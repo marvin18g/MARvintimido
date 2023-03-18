@@ -27,7 +27,7 @@ include ("menu.php");
         <div class="box">
             <div class="inner-box">
                 <div class="forms-wrap">
-                    <form action="vercliente.php" method="post" autocomplete="off" class="sign-in-form">
+                    <form action="vercliente.php" method="post" autocomplete="off" class="sign-in-form"  id="form_cliente">
                         <div class="logo">
                             <img src="./img/logo.png" alt="easyclass" />
                             <h4>Marvin Galeano</h4>
@@ -40,10 +40,11 @@ include ("menu.php");
                             <h6>Aun no estas registrado?</h6>
                             <a href="#" class="toggle">Sign up</a>
                         </div>
+                        
 
                         <div class="actual-form">
                             <div class="input-wrap">
-                                <input type="text" input name="nombre" id="nombre" class="input-field" autocomplete="off" required />
+                                <input type="text" input name="nombre" id="nombre" class="input-field" autocomplete="off" required  />
                                 <label>Name</label>
 
                                 
@@ -172,6 +173,7 @@ include ("menu.php");
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
  <script src="estilos/app.js"></script>
+ <script src="js/cliente.js"></script>
  <script src="http://localhost/MARVINVETERINARIA/estilos/script.js"></script>
 </body>
 

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign in & Sign up Form</title>
-    <link rel="stylesheet" href="http://localhost/MARVINVETERINARIA/VETERINARIAMARVIN2023/estilos/estilos.css" />
+    <link rel="stylesheet" href="http://localhost/MARVINTIMIDO/MARvintimido/estilos/estilos.css" />
     
 </head>
 
@@ -95,16 +95,18 @@
 
                 <div class="carousel">
                     <div class="images-wrapper">
-                        <img src="./img/214603.webp" class="image img-1 show" alt="" />
-                        <img src="./img/hola.jpg" class="image img-2" alt="" />
-                        <img src="./img/crea.jpg" class="image img-3" alt="" />
+                        <img src="./img/Green 1.svg" class="image img-1 show" alt="" />
+                        <img src="./img/Shoe 1.svg" class="image img-2" alt="" />
+                        <img src="./img/Red shoe.svg" class="image img-3" alt="" />
                     </div>
 
                     <div class="text-slider">
                         <div class="text-wrap">
                             <div class="text-group">
                                 <h2>Creador por @MarvinGaleano</h2>
-                                <h2>Vaterinaria Marvin | SV</h2>
+                                <h2> Nike | SV</h2>
+                                
+                                
                                
                             </div>
                         </div>

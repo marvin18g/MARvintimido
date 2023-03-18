@@ -44,7 +44,6 @@ img{
     padding: 10px;
 }
 
-
 .watch, .cart {
     line-height: 80px;
     position: absolute;
@@ -59,6 +58,10 @@ img{
 
 .next {
     left: 280px;
+}
+img{
+    height: 650px;
+    object-fit: cover;
 }
 
 .watch {
@@ -99,6 +102,7 @@ img{
     position: absolute;;
     top: 50%;
     left: 50%;
+
     transform: translate(-50%, -50%);
    
 }
