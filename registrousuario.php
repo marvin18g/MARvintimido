@@ -32,44 +32,14 @@ session_start();
                   <br>
                     <h4>Actualizar Usuario</h4>
                     <hr>
-                    <form class="mx-auto" method="post" id="form_usuario">
-                        <div class="mb-3">
-                            <label for="nombre" class="form-label">Usuario:</label>
-                            <input type="text" class="form-control" id="usuario" name="usuario">
-                        </div>
-                        <div class="mb-3">
-                            <label for="raza" class="form-label">Password:</label>
-                            <input type="password" class="form-control" id="password" name="password">
-                        </div>
-                        <div class="mb-3">
-                            <label for="color" class="form-label">email:</label>
-                            <input type="email" class="form-control" id="email" name="email">
-                        </div>
-                        <div class="mb-3">
-                            <label for="direccion" class="form-label">Telefono:</label>
-                            <input type="text" class="form-control" id="telefono" name="telefono">
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="direccion" class="form-label">Roles:</label>
-                            <input type="text" class="form-control" id="id_roles" name="id_roles">
-                        </div>
                     
-                        <div class="mb-3">
-                            <label for="sexo" class="form-label">status:</label>
-                            <select class="form-select" id="status" name="status">
-                                <option value="1">1</option>
-                                <option value="0">0</option>
-                            </select>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary" id= "editar-cliente">Actualizar</button>
-                    </form>
-
+                    <?php
+                include('modal/usuario.php')
+                ?>
 
                 </div>
             </div>
-            <div class="col-9">
+            <div class="col-12">
                 
 
                 <input class="form-control me-2" id="busqueda-cliente" type="search" placeholder="Search" aria-label="Search">
@@ -77,6 +47,12 @@ session_start();
                 <br>
                 <table id="tabla-usuario" class="table table-dark table-striped" >
                     <thead>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Nuevo Registro
+                </button>
+                <br>
+
+                <br>
                         <tr>
                             <th>Usuario</th>
                             <th>Password</th>
@@ -103,6 +79,7 @@ session_start();
             <!-- Optional JavaScript; choose one of the two! -->
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <script src="js/usuario.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
             <!-- Option 1: Bootstrap Bundle with Popper -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 

@@ -40,16 +40,16 @@
             <a class="nav-link" href="cliente.php"><i class="bi bi-person-check-fill"><span>  </span> </i>Cliente</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="mascotas.php"><i class="bi bi-browser-firefox"><span>    </span></i>Mascotas</a>
+            <a class="nav-link" href="mascotas.php"><i class="bi bi-browser-firefox"><span>    </span></i>Nike</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="usuario.php"><i class="bi bi-person-add"><span>    </span></i>Usuarios</a>
+            <a class="nav-link" href="usuario.php"><i class="bi bi-person-add"><span>    </span></i>Usuarios Nike</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="roles.php"><i class="bi bi-alipay"><span>    </span></i>Roles</a>
+            <a class="nav-link" href="roles.php"><i class="bi bi-alipay"><span>    </span></i>Roles Nike</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="consultas.php"><i class="bi bi-bag-plus"><span>    </span></i>Consultas</a>
+            <a class="nav-link" href="consultas.php"><i class="bi bi-bag-plus"><span>    </span></i>Nike Air Max</a>
           </li>
 
           <li class="nav-item">

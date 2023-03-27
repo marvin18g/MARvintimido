@@ -26,55 +26,32 @@ session_start();
   <br><br>
     <div class="container"><br>
         <div class="row">
-            <div class="col-3">
+            <div class="col-12">
               <br>
                 <div class="row justify-content-center">
                   <br>
-                    <h4>Actualizar Cliente</h4>
+                    <h4>Detalles Cliente</h4>
                     <hr>
-                    <form class="mx-auto" method="post" id="form_cliente">
-                        <div class="mb-3">
-                            <label for="nombre" class="form-label">Nombre:</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre">
-                        </div>
-                        <div class="mb-3">
-                            <label for="raza" class="form-label">telefono:</label>
-                            <input type="text" class="form-control" id="telefono" name="telefono">
-                        </div>
-                        <div class="mb-3">
-                            <label for="color" class="form-label">dui:</label>
-                            <input type="text" class="form-control" id="dui" name="dui">
-                        </div>
-                        <div class="mb-3">
-                            <label for="direccion" class="form-label">direccion:</label>
-                            <input type="text" class="form-control" id="direccion" name="direccion">
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">email:</label>
-                            <input type="email" class="form-control" id="email" name="email">
-                        </div>
-                        <div class="mb-3">
-                            <label for="sexo" class="form-label">status:</label>
-                            <select class="form-select" id="status" name="status">
-                                <option value="1">1</option>
-                                <option value="0">0</option>
-                            </select>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary" id= "editar-cliente">Actualizar</button>
-                    </form>
-
+                    
+            <?php
+                include('modal/cliente.php')
+                ?>
 
                 </div>
             </div>
-            <div class="col-9">
-                
+            <div class="col-12">
+
 
                 <input class="form-control me-2" id="busqueda-cliente" type="search" placeholder="Search" aria-label="Search">
 
                 <br>
                 <table id="tabla-cliente" class="table table-dark table-striped" >
                     <thead>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Nuevo Registro
+                </button>
+                <br>
+                <br>
                         <tr>
                             <th>Nombre</th>
                             <th>Telefono</th>

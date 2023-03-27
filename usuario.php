@@ -171,9 +171,9 @@ $conexion = null;
 
                 <div class="carousel">
                     <div class="images-wrapper">
-                        <img src="./img/214603.webp" class="image img-1 show" alt="" />
-                        <img src="./img/enfemera.jpg" class="image img-2" alt="" />
-                        <img src="./img/crea.jpg" class="image img-3" alt="" />
+                        <img src="./img/sd.svg" class="image img-1 show" alt="" />
+                        <img src="./img/Red shoe.svg" class="image img-2" alt="" />
+                        <img src="./img/busin.svg" class="image img-3" alt="" />
                         
                     </div>
 
@@ -201,6 +201,7 @@ $conexion = null;
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
  <script src="estilos/app.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
  <script src="http://localhost/MARVINVETERINARIA/estilos/script.js"></script>
 </body>
 

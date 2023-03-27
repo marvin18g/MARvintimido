@@ -65,7 +65,8 @@ include ("menu.php");
                             </div>
 
                             <div class="input-wrap">
-                                <input type="text" input name="telefono" id="telefono" class="input-field" autocomplete="off" required />
+                                
+                            <input type="text"  input name="telefono" id="telefono" class="input-field" autocomplete="off" required />
                                 <label>Telefono</label>
 
                                 
@@ -143,9 +144,9 @@ include ("menu.php");
 
                 <div class="carousel">
                     <div class="images-wrapper">
-                        <img src="./img/qs1.jpg" class="image img-1 show" alt="" />
-                        <img src="./img/qs.jpg" class="image img-2" alt="" />
-                        <img src="./img/qs2.jpg" class="image img-3" alt="" />
+                        <img src="./img/yellow 2.svg" class="image img-1 show" alt="" />
+                        <img src="./img/df.svg" class="image img-2" alt="" />
+                        <img src="./img/hh.svg" class="image img-3" alt="" />
                         
                     </div>
 
@@ -153,8 +154,8 @@ include ("menu.php");
                         <div class="text-wrap">
                             <div class="text-group">
                                 <h2>Creador por @MarvinGaleano</h2>
-                                <h2>Veterinaria Marvin | SV</h2>
-                                <h2>Vaterinaria Marvin | SV</h2>
+                                <h2>Nike Force Marvin | SV</h2>
+                                <h2>Nike @Marvin | SV</h2>
                                
                             </div>
                         </div>

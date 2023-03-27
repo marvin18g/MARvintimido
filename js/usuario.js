@@ -32,11 +32,12 @@ $(document).ready(function () {
           tr.append("<td>" + cliente.id_roles + "</td>");
          
           tr.append(
-            "<td><button class='editar-cliente btn btn-success bi bi-pencil-square' data-id='" +
-              cliente.id_usuario +"'></button></td>"
+            "<td><button data-bs-toggle='modal' data-bs-target='#exampleModal' class='editar-cliente btn btn-success' data-id='" +
+            cliente.id_usuario +
+            "'>Editar</button></td>"
           ); // Botón de edición
           tr.append(
-            "<td><button class='eliminar-cliente btn btn-danger bi bi-x-lg' data-id='" + 
+            "<td><button class='eliminar-cliente btn btn-danger bi bi-x-lg' onclick='eliminarprod();' data-id='" + 
    cliente.id_usuario + "'></button></td>"
           ); // Botón de eliminación
           tbody.append(tr);
@@ -121,5 +122,4 @@ $(document).ready(function () {
               },
             });
           }
-  
   

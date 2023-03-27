@@ -8,7 +8,7 @@
     <title>Bootstrap demo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="http://localhost/MARVINTIMIDO/MARvintimido/estilos/bootsrap.css" />
+<link rel="stylesheet" href="http://localhost/marvintimido/MARvintimido/estilos/bootsrap.css" />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -26,44 +26,13 @@ body{
   <body>
     <h1>NIKE!</h1>
 
-    <nav class="navbar navbar-dark bg-dark fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">@Marvin Galeano</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">@Marvin Galeano</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-          
-            <a class="nav-link active" aria-current="page" href="principal.php"><i class="bi bi-bell"></i>        Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="cliente.php"><i class="bi bi-person-check-fill"><span>  </span> </i>Cliente</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="mascotas.php"><i class="bi bi-browser-firefox"><span>    </span></i>Mascotas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="usuario.php"><i class="bi bi-person-add"><span>    </span></i>Usuarios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="roles.php"><i class="bi bi-alipay"><span>    </span></i>Roles</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="consultas.php"><i class="bi bi-bag-plus"><span>    </span></i>Consultas</a>
-          </li>
-         
-        </form>
-      </div>
-    </div>
-  </div>
-</nav>
+    <?php
+
+
+include ("menu.php");
+
+
+?>
 <div class="container">
             <div class="left"></div>
             <div class="right"></div>
@@ -100,18 +69,18 @@ body{
             <div class="left-sidebar">
 
 
-                  <h1 class="product-title">Welcome Marvin Veterinaria</h1>
+                  <h1 class="product-title">Welcome Marvin Nike</h1>
 
-                  <p class="desc">Nuestra prioridad es el bienestar absoluto, de tu compañero de vida. Utilizamos todo lo que esta a nuestro alcance para que este lo mas saludable, Gracias por preferirnos</p>
+                  <p class="desc">Nuestra prioridad es el bienestar absoluto, de tu estilo de vida. Utilizamos todo lo que esta a nuestro alcance para que este lo mas suave, Gracias por preferirnos</p>
 
-                  <p id="price">Precio de consulta $9.99</p>
+                  <p id="price">Nike Air Max  $239.99</p>
 
                   <button class="btn">Consultar</button>
 
             </div>
 
             <div class="product" id="product">
-                  <img src="img/Green 1.svg" alt="drone">
+                  <img src="img/Green 1.svg" alt="drone" class="zapato">
             </div>
 
             
