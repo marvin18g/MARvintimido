@@ -5,7 +5,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $sql = "SELECT * FROM usuarios WHERE usuario = :username AND password = :password";
+    $sql = "SELECT * FROM inicio WHERE username = :username AND password = :password";
 
     $stmt = $pdo->prepare($sql);
 

@@ -51,7 +51,7 @@
                         </div>
                     </form>
 
-                    <form action="login.php" method="post" autocomplete="off" class="sign-up-form">
+                    <form action="verindex.php" method="post" autocomplete="off" class="sign-up-form">
                         <div class="logo">
                             <img src="./img/logo.png" alt="easyclass" />
                             <h4>easyclass</h4>
@@ -65,24 +65,23 @@
 
                         <div class="actual-form">
                             <div class="input-wrap">
-                                <input type="text" minlength="4" class="input-field" autocomplete="off" required />
+                                <input type="text" name ="username" id="username" class="input-field" autocomplete="off" required />
                                 <label>Name</label>
                             </div>
 
                             <div class="input-wrap">
-                                <input name="username" id="username" type="email" class="input-field" autocomplete="off"
+                                <input name="email" id="email" type="email" class="input-field" autocomplete="off"
                                     required />
 
                                 <label>Email</label>
                             </div>
 
                             <div class="input-wrap">
-                                <input type="password"  class="input-field" required
-                                name="password"  id="password"/>
+                                <input type="password" name="password" class="input-field" required  name="password"  id="password"/>
                                 <label>Password</label>
                             </div>
 
-                            <input type="submit" value="Sign Up" class="sign-btn" />
+                            <input type="submit" value="Guardar" class="sign-btn" />
 
                             <p class="text">
                                 By signing up, I agree to the

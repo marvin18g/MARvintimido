@@ -11,28 +11,26 @@ try {
     $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
     // Obtener los valores del formulario
-    $nombre = $_POST['nombre'];
-    $status = $_POST['status'];
- 
-    if(preg_match("/^[a -ZA-zAÑáéíóúÁÉÍOÚ]+$/", $_POST["nombre"])){
-
-  
+    $nombre = $_POST['username'];
+    $password = $_POST['password'];
+    $email = $_POST['email'];
+   
+    
 
     // Preparar la consulta SQL INSERT con marcadores de posición
-    $sql = "INSERT INTO roles (nombre, status)
-            VALUES (:nombre, :status)";
+    $sql = "INSERT INTO inicio (password, email, username )
+            VALUES (:password, :email, :username)";
     $stmt = $conexion->prepare($sql);
-    $stmt->bindParam(':nombre', $nombre);
-    $stmt->bindParam(':status', $status);
+    $stmt->bindParam(':username', $nombre);
+    $stmt->bindParam(':password', $password);
+    $stmt->bindParam(':email', $email);
+    
+    
    
-}
-else{
-    echo "<script>alert('no se permiten caracteres especiales'); window.history.back();</script>";
-}
 
     // Ejecutar la consulta y verificar si fue exitosa
     if ($stmt->execute()) {
-        echo "<script>alert('Los datos fueron guardados correctamente.'); window.location = 'roles.php';</script>";
+        echo "<script>alert('Los datos fueron guardados correctamente.'); window.location = 'index.php';</script>";
     } else {
         echo "Hubo un error al guardar los datos.";
     }
@@ -43,6 +41,5 @@ else{
 // Cerrar la conexión con la base de datos
 $conexion = null;
 ?>
-
 
 

@@ -49,7 +49,7 @@ include ("menu.php");
                             </div>
 
                             <div class="input-wrap">
-                                <input type="text" name="password" id="password" class="input-field" autocomplete="off" required />
+                                <input type="password" name="password" id="password" class="input-field" autocomplete="off" required />
                                 <label>Password</label>
                             </div>
                             <div class="input-wrap">

@@ -18,6 +18,7 @@ try {
     $email = $_POST['email'];
     $estatus = $_POST['status'];
 
+    if(preg_match("/^[a -ZA-zAÑáéíóúÁÉÍOÚ]+$/", $_POST["nombre"])){
     // Preparar la consulta SQL INSERT con marcadores de posición
     $sql = "INSERT INTO cliente (nombre, telefono, dui, direccion, email, status)
             VALUES (:nombre, :telefono, :dui, :direccion, :email, :status)";
@@ -29,18 +30,22 @@ try {
     $stmt->bindParam(':email', $email);
     $stmt->bindParam(':status', $estatus);
 
-    // Ejecutar la consulta y verificar si fue exitosa
-    if ($stmt->execute()) {
-        echo "<script>alert('Los datos fueron guardados correctamente.'); window.location = 'cliente.php';</script>";
-    } else {
-        echo "Hubo un error al guardar los datos.";
-    }
+}
+else{
+    echo "<script>alert('no se permiten caracteres especiales'); window.history.back();</script>";
+}
+
+
+// Ejecutar la consulta y verificar si fue exitosa
+if ($stmt->execute()) {
+    echo "<script>alert('Los datos fueron guardados correctamente.'); window.location = 'cliente.php';</script>";
+} else {
+    echo "Hubo un error al guardar los datos.";
+}
 } catch(PDOException $e) {
-    echo "La conexión falló: " . $e->getMessage();
+echo "La conexión falló: " . $e->getMessage();
 }
 
 // Cerrar la conexión con la base de datos
 $conexion = null;
 ?>
-
-

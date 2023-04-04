@@ -20,6 +20,8 @@ try {
     $usuario = $_POST['id_usuario'];
     
 
+
+
     // Preparar la consulta SQL INSERT con marcadores de posición
     $sql = "INSERT INTO consultas (examen_fisico, diagnostico, medicamento, proxima_cita, costo, id_mascotas, id_usuario)
             VALUES (:examen_fisico, :diagnostico, :medicamento, :proxima_cita, :costo, :id_mascotas, :id_usuario)";
@@ -32,6 +34,8 @@ try {
     $stmt->bindParam(':id_mascotas', $mascotas);
     $stmt->bindParam(':id_usuario', $usuario);
     
+       
+
 
     // Ejecutar la consulta y verificar si fue exitosa
     if ($stmt->execute()) {

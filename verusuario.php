@@ -17,12 +17,13 @@ try {
     $telefono = $_POST['telefono'];
     $estatus = $_POST['status'];
     $rol = $_POST['id_roles'];
+    $token = md5($_POST["usuario"]."+".$_POST["email"]);
  
-  
+    if(preg_match("/^[a -ZA-zAÑáéíóúÁÉÍOÚ]+$/", $_POST["usuario"])){
 
     // Preparar la consulta SQL INSERT con marcadores de posición
-    $sql = "INSERT INTO usuarios (usuario, password, email, telefono, status, id_roles)
-            VALUES (:usuario, :password, :email, :telefono, :status , :id_roles)";
+    $sql = "INSERT INTO usuarios (token, usuario, password, email, telefono, status, id_roles)
+            VALUES (:token, :usuario, :password, :email, :telefono, :status , :id_roles)";
     $stmt = $conexion->prepare($sql);
     $stmt->bindParam(':usuario', $nombre);
     $stmt->bindParam(':password', $password);
@@ -30,7 +31,13 @@ try {
     $stmt->bindParam(':telefono', $telefono);
     $stmt->bindParam(':status', $estatus);
     $stmt->bindParam(':id_roles', $rol);
-   
+    $stmt->bindParam(':token', $token);
+    
+    }
+    else{
+        echo "<script>alert('no se permiten caracteres especiales'); window.history.back();</script>";
+    }
+    
 
     // Ejecutar la consulta y verificar si fue exitosa
     if ($stmt->execute()) {
