@@ -114,4 +114,27 @@ $(document).ready(function () {
               },
             });
           }
-         
+          $.ajax({
+            url: 'update_rol.php',
+            type: 'POST',
+            data: {
+              nombre: nombre, 
+              status: status,
+             
+            },
+            success: function(response) {
+              // Actualizar la tabla de usuarios
+              cargarDatos('');
+      
+              // Cerrar el modal
+              $('#exampleModal').modal('hide');
+      
+              // Mostrar un mensaje de éxito
+              alert('El usuario se ha guardado correctamente');
+            },
+            error: function(xhr, status, error) {
+              // Mostrar un mensaje de error
+              alert('Ha ocurrido un error al guardar el usuario');
+            }
+          });
+       

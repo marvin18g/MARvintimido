@@ -1,4 +1,5 @@
 <?php
+
 // Establecer la conexión con la base de datos
 $host = "localhost";
 $usuario = "root";
@@ -24,6 +25,18 @@ try {
     $stmt->bindParam(':username', $nombre);
     $stmt->bindParam(':password', $password);
     $stmt->bindParam(':email', $email);
+    
+    if(buscaRepetido($nombre,$password,$conexion)==1){
+        echo "<script>alert('El usuario y contraseña ya existen');</script>";
+        echo "<script>window.history.back();</script>";
+
+    exit();
+        
+     }else{
+        $sql = "INSERT INTO inicio (username, password, email)
+        VALUES (:usuario, :password, :email)";
+        $stmt = $conexion->prepare($sql);
+     }
     
     
    

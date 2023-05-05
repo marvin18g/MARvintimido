@@ -175,6 +175,7 @@ include ("menu.php");
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
  <script src="estilos/app.js"></script>
  <script src="js/cliente.js"></script>
+ 
  <script src="http://localhost/MARVINVETERINARIA/estilos/script.js"></script>
 </body>
 

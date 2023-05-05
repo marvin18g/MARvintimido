@@ -1,9 +1,14 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,12 +48,17 @@
                             </div>
 
                             <input type="submit" value="Sign In" class="sign-btn" />
+                            <?php require ('../autentificacion.php')?>
+                       <a href="<?php echo $client->createAuthUrl() ?>">             <i class="bi bi-google"></i>     Iniciar Sesion con Google </a>
 
                             <p class="text">
                                 Forgotten your password or you login datails?
                                 <a href="#">Get help</a> signing in
                             </p>
+                            
+                            
                         </div>
+                        
                     </form>
 
                     <form action="verindex.php" method="post" autocomplete="off" class="sign-up-form">
@@ -82,6 +92,8 @@
                             </div>
 
                             <input type="submit" value="Guardar" class="sign-btn" />
+                            <?php require ('../autentificacion.php')?>
+                       <a href="<?php echo $client->createAuthUrl() ?>">             <i class="bi bi-google"></i>     Iniciar Sesion con Google </a>
 
                             <p class="text">
                                 By signing up, I agree to the
@@ -89,7 +101,10 @@
                                 <a href="#">Privacy Policy</a>
                             </p>
                         </div>
+                        
                     </form>
+                  
+      </div>
                 </div>
 
                 <div class="carousel">

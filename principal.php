@@ -1,5 +1,9 @@
+<?php
 
 
+
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -32,6 +36,7 @@ body{
 include ("menu.php");
 
 
+
 ?>
 <div class="container">
             <div class="left"></div>
@@ -57,6 +62,7 @@ include ("menu.php");
                         <li>Mysql</li>
                         <li>PHP</li>
                         <li>AJAX</li>
+                        <a href="cerrarsesion.php">Salir</a>
                        
                   </ul>
 

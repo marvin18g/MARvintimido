@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -189,7 +190,7 @@ $conexion = null;
 
                 <div class="carousel">
                     <div class="images-wrapper">
-                        <img src="./img/qs1.jpg" class="image img-1 show" alt="" />
+                        <img src="./img/un.svg" class="image img-1 show" alt="" />
                         <img src="./img/qs.jpg" class="image img-2" alt="" />
                         <img src="./img/qs2.jpg" class="image img-3" alt="" />
                         

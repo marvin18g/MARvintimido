@@ -33,11 +33,10 @@ $(document).ready(function () {
          
           tr.append(
             "<td><button data-bs-toggle='modal' data-bs-target='#exampleModal' class='editar-cliente btn btn-success' data-id='" +
-            cliente.id_usuario +
-            "'>Editar</button></td>"
+            cliente.id_usuario + "'>Editar</button></td>"
           ); // Botón de edición
           tr.append(
-            "<td><button class='eliminar-cliente btn btn-danger bi bi-x-lg' onclick='eliminarprod();' data-id='" + 
+            "<td><button class='eliminar-cliente btn btn-danger bi bi-x-lg'  data-id='" + 
    cliente.id_usuario + "'></button></td>"
           ); // Botón de eliminación
           tbody.append(tr);
@@ -106,20 +105,66 @@ $(document).ready(function () {
         function guardarcliente() {
             var datos = $("#form_usuario").serialize(); // serializa los datos del formulario
             $.ajax({
-              url: "verusuario.php", // archivo PHP para procesar los datos
-              type: "post",
-              data: datos,
-              success: function (response) {
-                alert("Cliente guardado exitosamente");
-                $("#form_usuario")[0].reset();
-          
-                // hacer algo en respuesta exitosa del servidor
-                cargarDatos("");
-              },
-              error: function (xhr, status, error) {
-                alert("Error al guardar la mascota");
-                // manejar el error del servidor
-              },
+              type:"POST",
+              url:"verusuario.php",
+              data:datos,
+              success:function(r){
+  
+                if(r==2){
+                  alertify.alert("Este usuario ya existe, prueba con otro :)");
+                }
+                else if(r==1){
+                  $('#form_usuario')[0].reset();
+                  alertify.success("Agregado con exito");
+                }else{
+                  alertify.error("Fallo al agregar");
+                }
+              }
             });
           }
-  
+          
+        $(document).ready(function() {
+          // Manejador de eventos para el evento submit del formulario
+          $('#form_usuario').submit(function(event) {
+            // Prevenir la acción por defecto del formulario (enviar los datos por POST)
+            event.preventDefault();
+        
+            // Obtener los datos del formulario
+            var usuario = $('#usuario').val();
+            var password = $('#password').val();
+            var email = $('#email').val();
+            var telefono = $('#telefono').val();
+            var status = $('#status').val();
+            var id_roles = $('#id_roles').val();
+        
+            // Realizar la petición AJAX
+            $.ajax({
+              url: 'actualizarusuario.php',
+              type: 'POST',
+              data: {
+                usuario: usuario,
+                password: password,
+                email: email,
+                telefono: telefono,
+                status: status,
+                id_roles: id_roles
+              },
+              success: function(response) {
+                // Actualizar la tabla de usuarios
+                cargarDatos('');
+        
+                // Cerrar el modal
+                $('#exampleModal').modal('hide');
+        
+                // Mostrar un mensaje de éxito
+                alert('El usuario se ha guardado correctamente');
+              },
+              error: function(xhr, status, error) {
+                // Mostrar un mensaje de error
+                alert('Ha ocurrido un error al guardar el usuario');
+              }
+            });
+          });
+        });
+        
+        

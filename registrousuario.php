@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!doctype html>
 <html lang="en">
 <?php include('menu.php'); ?>
@@ -45,7 +42,7 @@ session_start();
                 <input class="form-control me-2" id="busqueda-cliente" type="search" placeholder="Search" aria-label="Search">
 
                 <br>
-                <table id="tabla-usuario" class="table table-dark table-striped" >
+                <table id="tabla-usuario" class="table table-bordeless " >
                     <thead>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Nuevo Registro
@@ -53,7 +50,7 @@ session_start();
                 <br>
 
                 <br>
-                        <tr>
+                        <tr class="table-border">
                             <th>Usuario</th>
                             <th>Password</th>
                             <th>Email</th>

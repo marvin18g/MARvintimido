@@ -1,5 +1,6 @@
 
 
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -53,7 +54,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="index.php"><i class="bi bi-bag-plus"><span>    </span></i>Salir</a>
+            <a class="nav-link" href="cerrarsesion.php"><i class="bi bi-bag-plus"><span></span></i>Salir</a>
           </li>
          
         </form>

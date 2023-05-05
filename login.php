@@ -1,4 +1,8 @@
 <?php
+
+
+
+   
 include('config.php');
 if (isset($_POST['username']) && isset($_POST['password'])) {
 
@@ -20,7 +24,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             exit;
         } else {
             // El usuario no existe o la contraseña es incorrecta. 
-            echo "<script>alert('¡Usuario y contraseña incorrectos!'); window.location = 'index.php?error=1';</script>";
+            echo "<script>alert('¡No existe el usuario , Inicie con su cuenta de google o cree un usuario!'); window.location = 'index.php?error=1';</script>";
             exit;
         }
     } else {

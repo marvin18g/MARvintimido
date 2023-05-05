@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +8,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign in & Sign up Form</title>
-    <link rel="stylesheet" href="http://localhost/marvintimido/MARvintimido/estilos/estilos1.css" />
+ 
 
+    <link rel="stylesheet" href="http://localhost/marvintimido/MARvintimido/estilos/estilos1.css" />
     
 </head>
 
@@ -28,38 +27,53 @@ include ("menu.php");
         <div class="box">
             <div class="inner-box">
                 <div class="forms-wrap">
-                    <form action="verusuario.php" method="post" autocomplete="off" class="sign-in-form">
+                    <form action="verusuario.php" method="post" autocomplete="off" class="sign-in-form"  id="form_cliente">
                         <div class="logo">
-                            <img src="./img/coffee.png" alt="easyclass" />
+                            <img src="./img/logo.png" alt="easyclass" />
                             <h4>Marvin Galeano</h4>
                             
                         </div>
 
                         <div class="heading">
-                            <h2>Roles</h2>
+                            <h2>Cliente</h2>
                             
                             <h6>Aun no estas registrado?</h6>
                             <a href="#" class="toggle">Sign up</a>
                         </div>
+                        
 
                         <div class="actual-form">
                             <div class="input-wrap">
-                                <input type="text" name="usuario" id="usuario" class="input-field" autocomplete="off" required />
-                                <label>Usuario</label>
+                                <input type="text" input name="usuario" id="usuario" class="input-field" autocomplete="off" required  />
+                                <label>Name</label>
+
+                                
                             </div>
 
                             <div class="input-wrap">
-                                <input type="password" name="password" id="password" class="input-field" autocomplete="off" required />
+                                <input type="password" input name="password" id="password" class="input-field" autocomplete="off" required />
                                 <label>Password</label>
-                            </div>
-                            <div class="input-wrap">
-                                <input type="text" name="email" id="email" class="input-field" autocomplete="off" required />
-                                <label>Email</label>
+
+                                
                             </div>
 
                             <div class="input-wrap">
-                                <input type="text" name="telefono" id="telefono" class="input-field" autocomplete="off" required />
+                                <input type="email" input name="email" id="email" class="input-field" autocomplete="off" required />
+                                <label>Email</label>
+
+                                
+                            </div>
+
+                            <div class="input-wrap">
+                                
+                            <input type="number"  input name="telefono" id="telefono" class="input-field" autocomplete="off" required />
                                 <label>Telefono</label>
+
+                                
+                            </div>
+
+                
+                                
                             </div>
                             <div class="form-group">
                             <h6>Status</h6>
@@ -70,13 +84,12 @@ include ("menu.php");
 				</select>
 			</div>
 
-                
             <div class="col-15">
   <div class="input-group mb-3">
     <small class="input-group-text"><i class="fa-solid fa-adress-book"></i></small>
     <select name="id_roles" id="id_roles" class="form-select" aria-label="Default select example" require>
 
-    <option selected><label for="floatingInputGroup1">--Nombre rol--</label></option>
+    <option selected><label for="floatingInputGroup1">--Id Roles--</label></option>
 
     
     <?php
@@ -98,35 +111,33 @@ $resultado = $conexion->query($consulta);
 
 while ($fila = $resultado->fetch(PDO::FETCH_ASSOC)) {
 
-    echo "<option value='" . $fila['id_roles'] . "'>" . $fila['nombre'] . "</option>";
+    echo "<option value='" . $fila['id_roles'] . "'>" . $fila['id_roles'] . "</option>";
 }
 echo "</select>";
 
 //Cierre de la conexión a la base de datos
 $conexion = null;
 ?>
-                    
-                    </div>
-           
-        </div>
-    </div>
-            
+
+
+</select>
+  </div>
+</div>
+
+                            
+
                             <input type="submit" value="Guardar" class="sign-btn" />
-                            <input type="submit" value="Ver detalles" onclick="window.location.href='registrousuario.php'" id="myModal" class="sign-btn" />
-                        
+                            <input type="submit" value="Ver detalles" onclick="window.location.href='registroclien.php'" id="myModal" class="sign-btn" />
+                           
 
                             <p class="text">
                                 Forgotten your password or you login datails?
                                 <a href="#">Get help</a> signing in
                             </p>
-                            
                         </div>
-                        
-                        
                     </form>
-                   
 
-                    <form action="verusuario.php" method="post" autocomplete="off" class="sign-up-form">
+                    <form action="vercliente.php" method="post" autocomplete="off" class="sign-up-form">
                         <div class="logo">
                             <img src="./img/logo.png" alt="easyclass" />
                             <h4>easyclass</h4>
@@ -143,6 +154,7 @@ $conexion = null;
                                 <input type="text" minlength="4" class="input-field" autocomplete="off" required />
                                 <label>Name</label>
                             </div>
+                            
 
                             <div class="input-wrap">
                                 <input name="username" id="username" type="email" class="input-field" autocomplete="off"
@@ -167,13 +179,12 @@ $conexion = null;
                         </div>
                     </form>
                 </div>
-                
 
                 <div class="carousel">
                     <div class="images-wrapper">
-                        <img src="./img/sd.svg" class="image img-1 show" alt="" />
-                        <img src="./img/Red shoe.svg" class="image img-2" alt="" />
-                        <img src="./img/busin.svg" class="image img-3" alt="" />
+                        <img src="./img/yellow 2.svg" class="image img-1 show" alt="" />
+                        <img src="./img/df.svg" class="image img-2" alt="" />
+                        <img src="./img/hh.svg" class="image img-3" alt="" />
                         
                     </div>
 
@@ -181,7 +192,8 @@ $conexion = null;
                         <div class="text-wrap">
                             <div class="text-group">
                                 <h2>Creador por @MarvinGaleano</h2>
-                                <h2>Vaterinaria Marvin | SV</h2>
+                                <h2>Nike Force Marvin | SV</h2>
+                                <h2>Nike @Marvin | SV</h2>
                                
                             </div>
                         </div>
@@ -194,15 +206,15 @@ $conexion = null;
                     </div>
                 </div>
             </div>
-            
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
  <script src="estilos/app.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
- <script src="http://localhost/MARVINVETERINARIA/estilos/script.js"></script>
+ <script src="js/usuario.js"></script>
+ 
+
 </body>
 
 </html>
